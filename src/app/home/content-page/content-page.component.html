@@ -1,0 +1,21 @@
+<div class="content_page">
+    <div class="content_page_images">
+        <img style="width: 100%; height: 100%; opacity: 0.4;" src="https://wallpaper.dog/large/20461318.jpg" alt="">
+    </div>
+    <div class="content_page_button">
+        <a href="https://www.disneyplus.com/es-co/brand/marvel"><button>View Marvel</button></a>
+    </div>
+    <div class="content_page_data">
+        <div class="content_page_about">
+            <h1>Some Events about Marvel</h1>
+        </div>
+        <div class="content_page_data_info">
+            <div class="content_page_data_cards" *ngFor="let item of creators">
+                <h1 class="content_page_data_cards_title">{{item.title}}</h1>
+                <div class="content_page_data">
+                    <p style="color: white;">{{item.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

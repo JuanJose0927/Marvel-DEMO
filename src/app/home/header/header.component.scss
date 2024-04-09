@@ -1,0 +1,113 @@
+
+@import '../../../../variables';
+
+.home{
+    width: 100%;
+    height: 100%;
+    display: $display;
+    align-items: $alignIt;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.home_header{
+    width: $width;
+    height: 100px;
+    display: $display;
+    align-items: $alignIt;
+    justify-content: $space-short;
+}
+.home_header_logo{
+    display: $display;
+    align-items: $alignIt;
+    justify-content: center;
+    gap: 30px;
+    img{
+        height: 100%;
+        width: 100px;
+    }
+}
+.home_header_logo_text{
+    a{
+        text-decoration: none;
+        font-weight: 500;
+        font-style: italic;
+        color: white;
+    }
+    font-size: $fontTitle;
+}
+.home_header_item_list{
+    display: $display;
+    gap: 30px;
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            font-size: 1.3em;
+            color: silver;
+            &:hover{
+                background-color: white;
+                padding: 5px;
+                color: black;
+                border-radius: 18px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px){
+    .home_header{
+        @include flexbox;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .home_header_item_list{
+        @include flexbox;
+        margin-right: 20px;
+        font-size: 12px;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+@media(max-width: 640px){
+    .home_header{
+        @include flexbox;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .home_header_item_list{
+        @include flexbox;
+    }
+}
+@media(max-width: 768px){
+    .home_header{
+        @include flexbox;
+    }
+    .home_header_logo_text{
+        font-size: 22px;
+        font-weight: bold
+    }
+    .home_header_item_list{
+        @include flexbox;
+    }
+    img{
+        width: 100%;
+    }
+}
+@media(max-width: 992px){
+    .home_header{
+        @include flexbox;
+    }
+    .home_header_logo_text{
+        font-size: 22px;
+        font-weight: bold
+    }
+    .home_header_item_list{
+        @include flexbox;
+    }
+    img{
+        width: 100%;
+    }
+}

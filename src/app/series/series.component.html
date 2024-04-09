@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+
+<div class="series_page">
+    <div class="series_page_content">
+        <img src="../../assets/img/SE.png" alt="" class="series">
+        <div class="series_page_content_info">
+            <div class="series_page_content_info_cards" *ngFor="let serie of series">
+                <h1 style="color: white;">{{serie.title}}</h1>
+                <img [src]="serie.thumbnail.path + '.' + serie.thumbnail.extension" alt="">
+            </div>
+        </div>
+    </div>
+</div>

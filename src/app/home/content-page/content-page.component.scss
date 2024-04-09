@@ -1,0 +1,104 @@
+@import "../../../../variables";
+
+.content_page {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    width: 100%;
+    height: 100%;
+}
+
+.content_page_images {
+    display: $display;
+    justify-content: space-around;
+    align-items: $alignIt;
+    height: 200px;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    img{
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.content_page_button {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: $justify;
+    align-items: $alignIt;
+    margin-top: 12px;
+    
+    a {
+        button {
+            @include buttons-primary;
+        }
+    }
+}
+
+.content_page_data {
+    display: $display;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignIt;
+    gap: 30px;
+    margin-top: 30px;
+    background-color: #2a0602;
+}
+.content_page_data_info{
+    display: $display;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: $justify;
+    align-items: $alignIt;
+}
+
+.content_page_data_cards {
+    width: 233px;
+    height: 400px;
+    padding: 10px;
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignIt;
+    border: 2px double white;
+    border-radius: 12px;
+
+    p {
+        text-align: justify;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 700;
+        font-style: italic;
+
+    }
+}
+
+.content_page_about {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignIt;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: oblique;
+}
+.content_page_data_cards_title{
+    font-size: 20px;
+    color: white;
+}
+
+@media (max-width:992px) {
+    .content_page_about{
+        h1{
+            font-size: 20px;
+        }
+    }
+}

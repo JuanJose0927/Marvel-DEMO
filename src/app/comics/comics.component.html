@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<div class="comics_page">
+    <div class="comics_page_front">
+        <img src="../../assets/img/CO.png" alt="" style="border-radius: 18px;" class="com">
+    </div>
+    <div class="comics_page_content">
+        <div class="comics_page_content_info" *ngFor="let comic of comics">
+            <h1>{{comic.title}}</h1>
+            <img [src]="comic.thumbnail.path + '.' + comic.thumbnail.extension" alt="">
+        </div>
+    </div>
+</div>
